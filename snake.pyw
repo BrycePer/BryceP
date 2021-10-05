@@ -7,8 +7,8 @@ pygame.init()
 window = pygame.display.set_mode((710, 500))
 pygame.display.set_caption('Snake')
 
-if os.path.isfile('asset/icon.png'):
-    snakeLogo = pygame.image.load('asset/icon.png')
+if os.path.isfile('icon.png'):
+    snakeLogo = pygame.image.load('icon.png')
     snakeLogo = pygame.transform.scale(snakeLogo, (160, 160))
     pygame.display.set_icon(snakeLogo)
 
@@ -20,13 +20,13 @@ window.fill((182,196,84))
 pygame.display.flip()
 textSurface = titleFont.render("Loading...", False, (240, 240, 255))
 window.blit(textSurface,(200,200))
-if os.path.isfile('asset/icon.png'):
+if os.path.isfile('icon.png'):
     window.blit(snakeLogo, (500,150))
     snakeLogo = pygame.transform.scale(snakeLogo, (120, 120))
 pygame.display.flip()
 
-if os.path.isfile('asset/music.mp3'):
-    mixer.Channel(0).play(pygame.mixer.Sound('asset/music.mp3'))
+if os.path.isfile('music.mp3'):
+    mixer.Channel(0).play(pygame.mixer.Sound('music.mp3'))
     mixer.Channel(0).set_volume(.4)
     mixer.Channel(1).set_volume(.2)
 
